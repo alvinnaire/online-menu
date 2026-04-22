@@ -5,29 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Online Menu</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: auto; padding: 20px; background: #fff; }
-    h1, h2 { color: #333; }
-    .section { margin-bottom: 30px; }
-    .item { margin-bottom: 15px; }
-    .item-title { font-weight: bold; font-size: 1.1em; }
-    .item-info { font-size: 0.9em; color: #555; margin: 3px 0; }
-    .price { font-weight: bold; margin-top: 2px; color: #000; }
+    body { 
+      font-family: 'Arial', sans-serif; 
+      max-width: 800px; 
+      margin: auto; 
+      padding: 20px; 
+      background: #f8f9fa; 
+      line-height: 1.5;
+    }
+    .header { 
+      text-align: center; 
+      margin-bottom: 30px; 
+      padding: 20px; 
+      background: white; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 { color: #2c3e50; margin: 0; font-size: 2.5em; }
+    h2 { color: #34495e; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px; }
+    .section { margin-bottom: 40px; }
+    .item { 
+      display: flex; 
+      background: white; 
+      margin-bottom: 15px; 
+      padding: 15px; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .item:hover { transform: translateY(-2px); }
+    .item-image { 
+      width: 120px; 
+      height: 120px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+      margin-right: 15px;
+    }
+    .item-content { flex: 1; }
+    .item-title { font-weight: bold; font-size: 1.2em; color: #2c3e50; margin-bottom: 5px; }
+    .item-info { font-size: 0.9em; color: #7f8c8d; margin-bottom: 8px; }
+    .price { font-weight: bold; font-size: 1.3em; color: #27ae60; }
+    @media (max-width: 600px) {
+      .item { flex-direction: column; }
+      .item-image { width: 100%; height: 150px; margin-right: 0; margin-bottom: 10px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Menu</h1>
-
-  <div class="section">
-    <h2>Starters</h2>
-    <div class="item">
-      <div class="item-title">Falafel Salad</div>
-      <div class="item-info">531 Kcal / Protein 11g<br />Falafel, cherry tomato, lettuce, chickpeas, labneh sauce, crispy tortilla bread.</div>
-      <div class="price">21 AED</div>
-    </div>
-    <!-- Repeat for other items -->
+  <div class="header">
+    <h1>🍽️ Online Menu</h1>
+    <p>Scan to view our delicious menu</p>
   </div>
 
-  <!-- Add other sections (Sandwiches, Bowls, Eggs, etc) -->
+  <div class="section">
+    <h2>🥗 Starters</h2>
+    <div class="item">
+      <img src="https://via.placeholder.com/120x120/3498db/ffffff?text=Falafel" alt="Falafel Salad" class="item-image">
+      <div class="item-content">
+        <div class="item-title">Falafel Salad</div>
+        <div class="item-info">531 Kcal / Protein 11g<br>Falafel, cherry tomato, lettuce, chickpeas, labneh sauce, crispy tortilla bread.</div>
+        <div class="price">21 AED</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/120x120/e74c3c/ffffff?text=Hummus" alt="Hummus Salad" class="item-image">
+      <div class="item-content">
+        <div class="item-title">Hummus Salad</div>
+        <div class="item-info">290 Kcal / Protein 9g<br>Hummus, chickpeas, cucumber, carrot, celery stick, pita bread.</div>
+        <div class="price">21 AED</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/120x120/f39c12/ffffff?text=Bread" alt="Bread Basket" class="item-image">
+      <div class="item-content">
+        <div class="item-title">Bread Basket</div>
+        <div class="item-info">474 Kcal / Protein 14g<br>Tartine sourdough bread, pita bread, borodinsky bread, baguette, butter, jam, butter.</div>
+        <div class="price">15 AED</div>
+      </div>
+    </div>
+  </div>
 
-</body>
-</html>
+  <div class="section">
+    <h2>🥪 Sandwiches</h2>
+    <div class="item">
+      <img src="https://via.placeholder.com/120x120/9b59b6/ffffff?text=Turkey" alt="Turkey Toast" class="item-image">
+      <div class="item-content">
+        <div class="item-title">Turkey Toast</div>
+        <div class="item-info">205 Kcal / Protein 13g<br>Spinach bread, sesame aioli sauce, smoked turkey, red tomatoes, cheddar cheese, young lettuce.</div>
+        <div class="price">21 AED</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/120x120/1abc9c/ffffff?text=Salmon" alt="Bagel Salmon" class="item-image">
+      <div class="item-content">
+        <div class="item-title">Bagel Salmon</div>
+        <div class="item-info">179 Kcal / Protein 13g<br>Bagel sesame bun, unagi cream sauce, cherry tomatoes, salted
